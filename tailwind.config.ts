@@ -47,6 +47,22 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        learning: {
+          DEFAULT: "hsl(var(--learning))",
+          foreground: "hsl(var(--learning-foreground))",
+        },
+        tech: {
+          DEFAULT: "hsl(var(--tech))",
+          foreground: "hsl(var(--tech-foreground))",
+        },
+        creative: {
+          DEFAULT: "hsl(var(--creative))",
+          foreground: "hsl(var(--creative-foreground))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -84,6 +100,8 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fade-in 0.8s ease-out",
+        "slide-up": "slide-up 0.6s ease-out",
       },
     },
   },
