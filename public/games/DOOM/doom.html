@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOOM DEMO - WEB</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { 
+            /* Estilo para centralizar o jogo */
+            background-color: #000; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            margin: 0; 
+            overflow: hidden; 
+        }
+        /* Define o tamanho inicial do canvas do jogo */
+        #canvas {
+            width: 800px;
+            height: 600px;
+            border: 2px solid white;
+            image-rendering: crisp-edges;
+            image-rendering: pixelated;
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="canvas" oncontextmenu="event.preventDefault()" tabindex="0"></canvas>
+
+    <script src="https://unpkg.com/doom-wasm@1.1.0/dist/doom.js"></script>
+    <script>
+        // Esta função garante que o motor encontre o seu WAD
+        function preRun() {
+            // Renomeia seu DOOM1.WAD para 'doom1.wad' internamente, 
+            // no sistema de arquivos virtual do navegador
+            FS.rename('DOOM1.WAD', 'doom1.wad'); 
+        }
+
+        // Configuração do Emscripten (o sistema que roda o Wasm)
+        var Module = {
+            preRun: [preRun],
+            canvas: document.getElementById('canvas'),
+            // Arquivos que o motor deve procurar para carregar
+            // O nome deve ser em minúsculo, por isso usamos o 'preRun' acima
+            locateFile: function(path, prefix) {
+                if (path == 'doom.wad' || path == 'doom2.wad' || path == 'doom1.wad') {
+                    // O motor vai procurar esses arquivos no servidor (URL)
+                    return path; 
+                }
+                // Os outros arquivos do motor são carregados do CDN
+                return prefix + path; 
+            }
+        };
+    </script>
+</body>
+</html>
