@@ -48,7 +48,7 @@ const Footer = () => {
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li className="flex items-center gap-2">
                   <Mail className="w-4 h-4" />
-                  <span>Contato: contato@iaeducativa.com</span>
+                  <span>Contato: isabellyteixeiravasconcelos@gmail.com</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Github className="w-4 h-4" />
@@ -64,7 +64,7 @@ const Footer = () => {
 
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
             <p>
-              © 2024 IA Educativa. Feito com{" "}
+              © 2025 IA Educativa. Feito com{" "}
               <Heart className="inline w-4 h-4 text-destructive fill-destructive" />{" "}
               para estudantes curiosos.
             </p>
