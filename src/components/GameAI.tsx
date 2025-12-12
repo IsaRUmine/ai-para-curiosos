@@ -2,7 +2,7 @@ import { Gamepad2, Zap, Brain } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import gameAiImage from "@/assets/game-ai-comparison.jpg";
+import gameAiImage from "@/assets/DOOMvsALIEN.png";
 
 const GameAI = () => {
   return (
