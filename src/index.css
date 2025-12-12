@@ -2,152 +2,123 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
 @layer base {
   :root {
-    /* --- IA / Tech Neon Light Mode --- */
+    /* ====== IA VIBES / ROXO NEON ====== */
+    --background: 260 30% 12%;         /* fundo tecnológico escuro */
+    --foreground: 260 20% 90%;         /* texto claro */
 
-    --background: 220 45% 97%; /* azul bem claro */
-    --foreground: 226 30% 18%;
+    --card: 260 25% 16%;
+    --card-foreground: 260 20% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 226 30% 18%;
+    --popover: 260 25% 16%;
+    --popover-foreground: 260 20% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 226 30% 18%;
-
-    /* Azul neon principal */
-    --primary: 220 85% 55%;
+    --primary: 265 80% 60%;            /* roxo neon */
     --primary-foreground: 0 0% 100%;
 
-    /* Roxo futurista */
-    --secondary: 265 70% 60%;
+    --secondary: 220 50% 55%;          /* azul futurista complementar */
     --secondary-foreground: 0 0% 100%;
 
-    /* Cinza neutro tecnológico */
-    --muted: 220 30% 94%;
-    --muted-foreground: 226 20% 40%;
+    --muted: 260 20% 20%;
+    --muted-foreground: 260 15% 70%;
 
-    /* Ciano neon */
-    --accent: 190 95% 52%;
-    --accent-foreground: 0 0% 100%;
-
-    /* Erro */
-    --destructive: 0 80% 55%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 220 20% 85%;
-    --input: 220 20% 85%;
-    --ring: 220 90% 55%;
-
-    --radius: 0.75rem;
-
-    /* Categorias */
-    --learning: 145 65% 50%;
-    --learning-foreground: 0 0% 100%;
-
-    --tech: 220 85% 55%;
-    --tech-foreground: 0 0% 100%;
-
-    --creative: 265 70% 60%;
-    --creative-foreground: 0 0% 100%;
-
-    --warning: 35 95% 60%;
-    --warning-foreground: 0 0% 100%;
-
-    /* Gradientes neon */
-    --gradient-hero: linear-gradient(
-      135deg,
-      hsl(220 85% 55%) 0%,
-      hsl(265 70% 60%) 100%
-    );
-    --gradient-card: linear-gradient(
-      135deg,
-      hsl(220 85% 55% / 0.08) 0%,
-      hsl(265 70% 60% / 0.08) 100%
-    );
-    --gradient-accent: linear-gradient(
-      135deg,
-      hsl(190 95% 52%) 0%,
-      hsl(220 85% 55%) 100%
-    );
-
-    --shadow-sm: 0 2px 8px hsl(220 85% 55% / 0.08);
-    --shadow-md: 0 4px 16px hsl(220 85% 55% / 0.12);
-    --shadow-lg: 0 8px 32px hsl(220 85% 55% / 0.18);
-
-    /* Sidebar */
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 226 30% 18%;
-    --sidebar-primary: 220 85% 55%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 20% 92%;
-    --sidebar-accent-foreground: 226 30% 18%;
-    --sidebar-border: 220 20% 85%;
-    --sidebar-ring: 220 90% 55%;
-  }
-
-  /* --- Dark Mode Futurista --- */
-  .dark {
-    --background: 230 25% 8%;
-    --foreground: 215 30% 98%;
-
-    --card: 230 20% 13%;
-    --card-foreground: 215 30% 98%;
-
-    --popover: 230 20% 13%;
-    --popover-foreground: 215 30% 98%;
-
-    /* Azul neon */
-    --primary: 220 95% 60%;
-    --primary-foreground: 0 0% 100%;
-
-    /* Roxo neon */
-    --secondary: 265 80% 70%;
-    --secondary-foreground: 0 0% 100%;
-
-    /* Cinza tecnológico */
-    --muted: 230 15% 18%;
-    --muted-foreground: 215 20% 70%;
-
-    /* Ciano neon */
-    --accent: 190 95% 60%;
+    --accent: 200 70% 55%;             /* ciano tecnológico */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 230 15% 18%;
-    --input: 230 15% 18%;
-    --ring: 220 90% 60%;
+    --border: 260 15% 25%;
+    --input: 260 15% 25%;
+    --ring: 265 80% 60%;
 
-    --gradient-hero: linear-gradient(
-      135deg,
-      hsl(220 95% 60%) 0%,
-      hsl(265 80% 70%) 100%
-    );
-    --gradient-card: linear-gradient(
-      135deg,
-      hsl(220 95% 60% / 0.12) 0%,
-      hsl(265 80% 70% / 0.12) 100%
-    );
-    --gradient-accent: linear-gradient(
-      135deg,
-      hsl(190 95% 60%) 0%,
-      hsl(220 95% 60%) 100%
-    );
+    --radius: 0.75rem;
 
-    --shadow-sm: 0 2px 8px hsl(0 0% 0% / 0.3);
-    --shadow-md: 0 4px 16px hsl(0 0% 0% / 0.45);
-    --shadow-lg: 0 8px 32px hsl(0 0% 0% / 0.55);
+    /* Tema educacional adaptado para o novo esquema */
+    --learning: 145 65% 55%;
+    --learning-foreground: 0 0% 100%;
+    
+    --tech: 214 95% 50%;
+    --tech-foreground: 0 0% 100%;
+    
+    --creative: 280 65% 60%;
+    --creative-foreground: 0 0% 100%;
+    
+    --warning: 35 95% 60%;
+    --warning-foreground: 0 0% 100%;
 
-    --sidebar-background: 230 20% 10%;
-    --sidebar-foreground: 215 30% 98%;
-    --sidebar-primary: 220 95% 60%;
+    /* Gradients (versão neon IA) */
+    --gradient-hero: linear-gradient(135deg, hsl(265 80% 60%) 0%, hsl(220 50% 55%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(265 80% 60% / 0.05) 0%, hsl(200 70% 55% / 0.05) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(200 70% 55%) 0%, hsl(265 80% 60%) 100%);
+    
+    /* Shadows ajustadas para o tema escuro neon */
+    --shadow-sm: 0 2px 8px hsl(265 80% 60% / 0.15);
+    --shadow-md: 0 4px 16px hsl(265 80% 60% / 0.25);
+    --shadow-lg: 0 8px 32px hsl(265 80% 60% / 0.35);
+
+    /* Sidebar */
+    --sidebar-background: 260 30% 10%;
+    --sidebar-foreground: 260 20% 90%;
+    --sidebar-primary: 265 80% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 230 15% 18%;
-    --sidebar-accent-foreground: 215 30% 98%;
-    --sidebar-border: 230 15% 18%;
-    --sidebar-ring: 220 95% 60%;
+    --sidebar-accent: 260 20% 18%;
+    --sidebar-accent-foreground: 260 20% 95%;
+    --sidebar-border: 260 15% 25%;
+    --sidebar-ring: 265 80% 60%;
+  }
+
+  .dark {
+    --background: 260 35% 8%;
+    --foreground: 260 15% 92%;
+
+    --card: 260 30% 12%;
+    --card-foreground: 260 15% 92%;
+
+    --popover: 260 30% 12%;
+    --popover-foreground: 260 15% 92%;
+
+    --primary: 265 85% 62%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 55% 60%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 260 25% 18%;
+    --muted-foreground: 260 15% 70%;
+
+    --accent: 200 75% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 260 20% 18%;
+    --input: 260 20% 18%;
+    --ring: 265 85% 62%;
+    
+    /* Dark gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(265 85% 62%) 0%, hsl(220 55% 60%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(265 85% 62% / 0.1) 0%, hsl(200 75% 60% / 0.1) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(200 75% 60%) 0%, hsl(265 85% 62%) 100%);
+    
+    --shadow-sm: 0 2px 8px hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 16px hsl(0 0% 0% / 0.4);
+    --shadow-lg: 0 8px 32px hsl(0 0% 0% / 0.5);
+
+    --sidebar-background: 260 28% 8%;
+    --sidebar-foreground: 260 20% 95%;
+    --sidebar-primary: 265 85% 62%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 260 20% 15%;
+    --sidebar-accent-foreground: 260 20% 95%;
+    --sidebar-border: 260 20% 15%;
+    --sidebar-ring: 265 85% 62%;
   }
 }
 
@@ -157,7 +128,7 @@
   }
 
   body {
-    @apply bg-background text-foreground transition-colors duration-300;
+    @apply bg-background text-foreground;
   }
 }
 
