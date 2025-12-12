@@ -1,6 +1,6 @@
 import { MessageSquare, Music, Camera, Smartphone, Bot, Film } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import aiDailyLife from "@/assets/ai-daily-life.jpg";
+import aiDailyLife from "@/assets/IA aprendizagem.png";
 
 const DailyExamples = () => {
   const examples = [
