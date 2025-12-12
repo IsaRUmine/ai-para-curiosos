@@ -1,6 +1,6 @@
 import { Brain, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-ai.jpg";
+import heroImage from "@/assets/DEM IA.png";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
